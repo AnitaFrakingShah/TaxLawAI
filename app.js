@@ -1,6 +1,7 @@
-var animateApp = angular.module('animateApp', ['ngRoute']);
+var animateApp = angular.module('animateApp', []);
 
-animateApp.config(function($routeProvider) {
+animateApp.config(
+    function($routeProvider) {
     $routeProvider
     	.when('/', {
     		templateUrl: 'page-home.html',
