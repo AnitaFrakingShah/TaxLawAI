@@ -29,7 +29,8 @@ html         { overflow-y:hidden; }
 
 /* page specific animations ------------------------ */
 
-/* home -------------------------- */
+/* buttons -------------------------- */
+.btn-anita {background:#00907c; color:#ffffff;}
 
 /* rotate and fall */
 @-webkit-keyframes rotateFall {
