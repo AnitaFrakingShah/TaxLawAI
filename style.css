@@ -22,8 +22,8 @@ html         { overflow-y:hidden; }
 /* ANIMATIONS
 ============================================================================= */
 
-.page.ng-leave 	{ z-index:9999; }
-.page.ng-enter 	{ z-index:8888; }
+.page.ng-leave 	{ animation: scaleUp 0.5s both ease-in; z-index: 8888; }
+.page.ng-enter 	{ animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
 .ng-enter           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }
 .ng-leave           { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
 
