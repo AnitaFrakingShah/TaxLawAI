@@ -114,10 +114,7 @@ html         { overflow-y:hidden; }
 	to { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
 
-body {
-    padding:50px;
-    background-color:white;
-}
+
 .s-hidden {
     visibility:hidden;
     padding-right:10px;
@@ -128,7 +125,9 @@ body {
     position:relative;
     font:normal 11px/22px Arial, Sans-Serif;
     color:black;
-    border:1px solid #ccc;
+    height: 44px;
+    width: 44px;
+    border:10px solid #ccc;
 }
 .styledSelect {
     position:absolute;
