@@ -4,16 +4,64 @@
 
 	<!-- CSS -->
 	<!-- load bootstrap (bootswatch version) -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css" type="text/css"/>
-	<link rel="stylesheet" href="style.css" type="text/css"/>
-	
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="/Users/anitashah/Desktop/ANITA/UBC COURSES/TaxLawAI/style.css" type="text/css"/>
+
 	<!-- JS -->
 	<!-- load angular, ngRoute, ngAnimate -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://code.angularjs.org/1.2.13/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
-	<script src="app.js"></script>
+	<script src="/Users/anitashah/Desktop/ANITA/UBC COURSES/TaxLawAI/app.js"></script>
+<script>
+if ($('.question1').html() == localStorage.getItem("Question")) {
+	clearInterval(update);
+}
 
+function getQuestion() {
+	var Int_Question = $('#Input1 option:selected').text() + ' ' + $('#Input2 option:selected').text() + ' ' + $('#Input3 option:selected').text() + ' ' + $('#Input4 option:selected').text() + ' ' + $('#Input5 option:selected').text();
+	localStorage.setItem("Question", Int_Question);
+}
+
+	function setQuestion() {
+		var Int2_Question = localStorage.getItem("Question");
+		$('.question1').html(Int2_Question);
+	}
+
+	function doOnClick() {
+        $('.question1').click();
+    }
+
+		var update = setInterval(function() {
+			setQuestion();
+		}, 1);
+
+</script>
+<script>
+      function downLoad(){
+				getQuestion();
+				wanted.style.visibility= "hidden";
+        var progressbar = $('#progressbar'),
+        max = progressbar.attr('max'),
+        time = (1000/max)*10,
+        value = progressbar.val();
+        var loading = function() {
+        value += 1;
+        addValue = progressbar.val(value);
+        $('.progress-value').html(value + '%');
+        if (value == max) {
+        clearInterval(animate);
+				progressbar.val(0);
+				$('.progress-value').html(0 + '%');
+        document.location.href = "#contact";
+ }
+};
+var animate = setInterval(function() {
+loading();
+}, ((1000/max)*10));
+}
+</script>
 </head>
 
 <!-- apply our angular app -->
@@ -23,6 +71,6 @@
 	<!-- each angular controller applies a different class here -->
 	<div class="page {{ pageClass }}" ng-view></div>
 
-		
+
 </body>
 </html>

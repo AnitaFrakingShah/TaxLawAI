@@ -1,17 +1,31 @@
 /* BASE STYLES
 ============================================================================= */
 html         { overflow-y:hidden; }
-.page        { 
-	bottom:0; 
+.page        {
+	bottom:0;
 	padding-top:200px;
-	position:absolute; 
+	position:absolute;
 	text-align:center;
-	top:0;  
-	width:100%; 
+	top:0;
+	width:100%;
 }
 
 .page h1 	{ font-size:60px; }
 .page a     { margin-top:50px; }
+
+.input {
+	height: 150px;
+	width: 150px;
+
+
+	white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* ancient Opera */
+  white-space: -o-pre-wrap; /* newer Opera */
+  white-space: pre-wrap; /* Chrome; W3C standard */
+  word-wrap: break-word; /* IE */
+}
+
+
 
 /* PAGES
 ============================================================================= */
@@ -28,7 +42,7 @@ html         { overflow-y:hidden; }
 /* page specific animations ------------------------ */
 
 /* buttons -------------------------- */
-.btn-anita {background:#00907c; color:#ffffff;}
+.btn-anita {background:#00907c; color:#ffffff; display: block; position:fixed;bottom:0;left:0;right:0;}
 
 /* rotate and fall */
 @-webkit-keyframes rotateFall {
@@ -96,7 +110,7 @@ html         { overflow-y:hidden; }
 @keyframes slideOutLeft {
 	to 		{ transform: translateX(-100%); }
 }
-@-moz-keyframes slideOutLeft {	
+@-moz-keyframes slideOutLeft {
 	to 		{ -moz-transform: translateX(-100%); }
 }
 @-webkit-keyframes slideOutLeft {
